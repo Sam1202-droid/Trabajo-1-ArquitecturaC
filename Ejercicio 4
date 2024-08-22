@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// Función que convierte una letra minúscula a mayúscula modificando el valor original
+void convertirAMayuscula(char *letra) {
+    // Verifica si la letra está en el rango de 'a' a 'z'
+    if (*letra >= 'a' && *letra <= 'z') {
+        // Convierte la letra a mayúscula restando 32
+        *letra = *letra - 32;
+    }
+}
+
+int main() {
+    char letra;
+
+    // Solicita al usuario una letra minúscula
+    printf("Introduce una letra minúscula: ");
+    scanf("%c", &letra);
+
+    // Convierte la letra a mayúscula modificando la variable original
+    convertirAMayuscula(&letra);
+    printf("La letra mayúscula correspondiente es: %c\n", letra);
+
+    return 0;
+}
